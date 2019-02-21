@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     97688,       2297]
-NotebookOptionsPosition[     96673,       2259]
-NotebookOutlinePosition[     97046,       2275]
-CellTagsIndexPosition[     97003,       2272]
+NotebookDataLength[    102121,       2373]
+NotebookOptionsPosition[    101107,       2335]
+NotebookOutlinePosition[    101480,       2351]
+CellTagsIndexPosition[    101437,       2348]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -229,8 +229,8 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"nw", "=", "2"}], ";", 
-   RowBox[{"nh", "=", "3"}], ";", 
-   RowBox[{"nd", "=", "3"}], ";"}], " "}], "\[IndentingNewLine]", 
+   RowBox[{"nh", "=", "10"}], ";", 
+   RowBox[{"nd", "=", "10"}], ";"}], " "}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"sw", " ", "=", 
@@ -601,7 +601,7 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"i", "=", "1"}], ",", 
     RowBox[{"i", " ", "\[LessEqual]", " ", "sd"}], ",", 
-    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{"If", "[", 
       RowBox[{
@@ -862,8 +862,8 @@ Cell[BoxData[{
            RowBox[{"AppendTo", "[", 
             RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
          "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
-     ";"}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+     ";"}]}], "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"sid", "+=", 
@@ -875,335 +875,400 @@ Cell[BoxData[{
    RowBox[{"Wall", " ", 
     RowBox[{"VI", "."}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{
-   RowBox[{"For", "[", 
-    RowBox[{
-     RowBox[{"i", "=", "1"}], ",", 
-     RowBox[{"i", "<", "sh"}], ",", 
-     RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"For", "[", 
-       RowBox[{
-        RowBox[{"j", "=", "1"}], ",", 
-        RowBox[{"j", "<", "sw"}], ",", 
-        RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"P", " ", "=", " ", 
-          RowBox[{"{", " ", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"1", "-", 
-               RowBox[{"j", "/", "sw"}]}], ")"}], "*", "w"}], " ", ",", " ", 
-            "d", ",", " ", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"1", "-", 
-               RowBox[{"i", "/", "sh"}]}], ")"}], "*", "h"}]}], "}"}]}], ";", 
-         "\[IndentingNewLine]", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"Points", ",", "P"}], "]"}], ";", "\[IndentingNewLine]", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"Ids", ",", 
-           RowBox[{"sid", "+", " ", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"i", "-", "1"}], ")"}], "*", "sh"}], "+", "j", "-", 
-            "1"}]}], "]"}], ";", "\[IndentingNewLine]", 
-         RowBox[{"(*", " ", 
-          RowBox[{"Wall", " ", "VI", " ", 
-           RowBox[{"faces", ":", " ", 
-            RowBox[{"upper", " ", "left", " ", "corner"}]}]}], " ", "*)"}], 
-         "\[IndentingNewLine]", 
-         RowBox[{"If", "[", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"i", "\[Equal]", "1"}], "&&", 
-            RowBox[{"j", "\[Equal]", "1"}]}], ",", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"Poly", "=", 
-             RowBox[{"{", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"sid", "-", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
-                RowBox[{"2", "*", "rl"}]}], ",", "\[IndentingNewLine]", "sid",
-                ",", "\[IndentingNewLine]", 
-               RowBox[{"sid", "-", 
-                RowBox[{"(", 
-                 RowBox[{"sw", "-", "1"}], ")"}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"sid", "-", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", "rl"}]}],
-               "\[IndentingNewLine]", "}"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"AppendTo", "[", 
-             RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
-          "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-         RowBox[{"(*", " ", 
-          RowBox[{"Wall", " ", "VI", " ", 
-           RowBox[{"faces", ":", " ", 
-            RowBox[{"first", " ", "row", " ", "interior"}]}]}], " ", "*)"}], 
-         "\[IndentingNewLine]", 
-         RowBox[{"If", "[", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"i", "\[Equal]", "1"}], "&&", 
-            RowBox[{"j", ">", "1"}]}], ",", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"Poly", "=", 
-             RowBox[{"{", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"sid", "+", "j", "-", "2"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"sid", "+", "j", "-", "1"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"sid", "-", 
-                RowBox[{"(", 
-                 RowBox[{"sw", "-", "1"}], ")"}], "+", "j", "-", "1"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"sid", "-", 
-                RowBox[{"(", 
-                 RowBox[{"sw", "-", "1"}], ")"}], "+", "j", "-", "2"}]}], 
-              "\[IndentingNewLine]", "}"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"AppendTo", "[", 
-             RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
-          "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-         RowBox[{"(*", " ", 
-          RowBox[{"Wall", " ", "VI", " ", 
-           RowBox[{"faces", ":", " ", 
-            RowBox[{"left", " ", "edge"}]}]}], " ", "*)"}], 
-         "\[IndentingNewLine]", 
-         RowBox[{"If", "[", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"i", ">", "1"}], "&&", 
-            RowBox[{"j", "==", "1"}]}], ",", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"Poly", "=", 
-             RowBox[{"{", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"sid", "-", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
-                RowBox[{"2", "*", "rl"}], "-", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"i", "-", "1"}], ")"}], "*", "rl"}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"sid", "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"i", "-", "1"}], ")"}], "*", 
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}]}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"sid", "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"i", "-", "2"}], ")"}], "*", 
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}]}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"sid", "-", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
-                RowBox[{"i", "*", "rl"}]}]}], "\[IndentingNewLine]", "}"}]}], 
-            ";", "\[IndentingNewLine]", 
-            RowBox[{"AppendTo", "[", 
-             RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
-          "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-         RowBox[{"(*", " ", 
-          RowBox[{"Wall", " ", "VI", " ", 
-           RowBox[{"faces", ":", " ", "Interior"}]}], " ", "*)"}], 
-         "\[IndentingNewLine]", 
-         RowBox[{"If", "[", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"i", ">", "1"}], "&&", 
-            RowBox[{"j", ">", "1"}]}], ",", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"Poly", "=", 
-             RowBox[{"{", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"sid", "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"i", "-", "1"}], ")"}], "*", 
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "2"}], 
-               ",", "\[IndentingNewLine]", 
-               RowBox[{"sid", "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"i", "-", "1"}], ")"}], "*", 
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "1"}], 
-               ",", "\[IndentingNewLine]", 
-               RowBox[{"sid", "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"i", "-", "2"}], ")"}], "*", 
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "1"}], 
-               ",", "\[IndentingNewLine]", 
-               RowBox[{"sid", "+", 
-                RowBox[{
-                 RowBox[{"(", 
-                  RowBox[{"i", "-", "2"}], ")"}], "*", 
-                 RowBox[{"(", 
-                  RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "2"}]}], 
-              "\[IndentingNewLine]", "}"}]}], ";", "\[IndentingNewLine]", 
-            RowBox[{"AppendTo", "[", 
-             RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
-          "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}],
-       ";", "\[IndentingNewLine]", 
-      RowBox[{"(*", " ", 
-       RowBox[{"Wall", " ", 
-        RowBox[{"VI", ":", " ", 
-         RowBox[{"upper", " ", "right", " ", "corner"}]}]}], " ", "*)"}], 
-      "\[IndentingNewLine]", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"i", "\[Equal]", "1"}], ",", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"Poly", "=", 
-          RowBox[{"{", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"sid", "+", 
-             RowBox[{"(", 
-              RowBox[{"sw", "-", "2"}], ")"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"sid", "-", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", "rl", "-", 
-             "1"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"sid", "-", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", "1"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"sid", "-", "1"}]}], "\[IndentingNewLine]", "}"}]}], ";", 
-         "\[IndentingNewLine]", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
-       "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"(*", " ", 
-       RowBox[{"Wall", " ", 
-        RowBox[{"VI", ":", " ", 
-         RowBox[{"right", " ", "edge"}]}]}], " ", "*)"}], 
-      "\[IndentingNewLine]", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"i", ">", "1"}], ",", "\[IndentingNewLine]", 
-        RowBox[{
-         RowBox[{"Poly", "=", 
-          RowBox[{"{", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"sid", "+", 
-             RowBox[{"i", "*", 
-              RowBox[{"(", 
-               RowBox[{"sw", "-", "1"}], ")"}]}], "-", "1"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"sid", "-", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
-             RowBox[{"i", "*", "rl"}], "-", "1"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"sid", "-", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"i", "-", "1"}], ")"}], "*", "rl"}], "-", "1"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"sid", "+", 
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"i", "-", "1"}], ")"}], "*", 
-              RowBox[{"(", 
-               RowBox[{"sw", "-", "1"}], ")"}]}], "-", "1"}]}], 
-           "\[IndentingNewLine]", "}"}]}], ";", "\[IndentingNewLine]", 
-         RowBox[{"AppendTo", "[", 
-          RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
-       "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
-   ";"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{"Wall", " ", 
-    RowBox[{"VI", ":", " ", 
-     RowBox[{"lower", " ", "left", " ", "corner"}]}]}], " ", 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Poly", "=", 
-   RowBox[{"{", 
-    RowBox[{"0", ",", " ", "1", ",", " ", 
-     RowBox[{"sid", "+", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{"sw", "-", "1"}], ")"}], "*", 
-       RowBox[{"(", 
-        RowBox[{"sh", "-", "2"}], ")"}]}]}], ",", " ", 
-     RowBox[{"nw", "*", "nd"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"AppendTo", "[", 
-    RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{"Wall", " ", 
-    RowBox[{"VI", ":", " ", 
-     RowBox[{"last", " ", "row", " ", "interior"}]}]}], " ", 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
   RowBox[{"For", "[", 
    RowBox[{
-    RowBox[{"j", "=", "1"}], ",", 
-    RowBox[{"j", "<", 
-     RowBox[{"sw", "-", "1"}]}], ",", 
-    RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"i", "=", "1"}], ",", 
+    RowBox[{"i", "<", "sh"}], ",", 
+    RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"Poly", "=", 
-      RowBox[{"{", "\[IndentingNewLine]", 
-       RowBox[{"j", ",", "\[IndentingNewLine]", 
-        RowBox[{"j", "+", "1"}], ",", "\[IndentingNewLine]", 
-        RowBox[{"sid", "+", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"sw", ">", "1"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"For", "[", 
          RowBox[{
-          RowBox[{"(", 
-           RowBox[{"sw", "-", "1"}], ")"}], "*", 
-          RowBox[{"(", 
-           RowBox[{"sh", "-", "2"}], ")"}]}], "+", "j"}], ",", 
+          RowBox[{"j", "=", "1"}], ",", 
+          RowBox[{"j", "<", "sw"}], ",", 
+          RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"P", " ", "=", " ", 
+            RowBox[{"{", " ", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", 
+                 RowBox[{"j", "/", "sw"}]}], ")"}], "*", "w"}], " ", ",", " ",
+               "d", ",", " ", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"1", "-", 
+                 RowBox[{"i", "/", "sh"}]}], ")"}], "*", "h"}]}], "}"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"Points", ",", "P"}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"Ids", ",", 
+             RowBox[{"sid", "+", " ", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"i", "-", "1"}], ")"}], "*", "sh"}], "+", "j", "-", 
+              "1"}]}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{"Wall", " ", "VI", " ", 
+             RowBox[{"faces", ":", " ", 
+              RowBox[{"upper", " ", "left", " ", "corner"}]}]}], " ", "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"i", "\[Equal]", "1"}], "&&", 
+              RowBox[{"j", "\[Equal]", "1"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Poly", "=", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"sid", "-", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+                  RowBox[{"2", "*", "rl"}]}], ",", "\[IndentingNewLine]", 
+                 "sid", ",", "\[IndentingNewLine]", 
+                 RowBox[{"sid", "-", 
+                  RowBox[{"(", 
+                   RowBox[{"sw", "-", "1"}], ")"}]}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"sid", "-", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+                  "rl"}]}], "\[IndentingNewLine]", "}"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+            "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{"Wall", " ", "VI", " ", 
+             RowBox[{"faces", ":", " ", 
+              RowBox[{"first", " ", "row", " ", "interior"}]}]}], " ", "*)"}],
+            "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"i", "\[Equal]", "1"}], "&&", 
+              RowBox[{"j", ">", "1"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Poly", "=", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"sid", "+", "j", "-", "2"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"sid", "+", "j", "-", "1"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"sid", "-", 
+                  RowBox[{"(", 
+                   RowBox[{"sw", "-", "1"}], ")"}], "+", "j", "-", "1"}], ",",
+                  "\[IndentingNewLine]", 
+                 RowBox[{"sid", "-", 
+                  RowBox[{"(", 
+                   RowBox[{"sw", "-", "1"}], ")"}], "+", "j", "-", "2"}]}], 
+                "\[IndentingNewLine]", "}"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+            "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{"Wall", " ", "VI", " ", 
+             RowBox[{"faces", ":", " ", 
+              RowBox[{"left", " ", "edge"}]}]}], " ", "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"i", ">", "1"}], "&&", 
+              RowBox[{"j", "==", "1"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Poly", "=", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"sid", "-", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+                  RowBox[{"2", "*", "rl"}], "-", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}], "*", "rl"}]}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"sid", "+", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}]}]}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"sid", "+", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "2"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}]}]}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"sid", "-", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+                  RowBox[{"i", "*", "rl"}]}]}], "\[IndentingNewLine]", 
+                "}"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+            "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{"Wall", " ", "VI", " ", 
+             RowBox[{"faces", ":", " ", "Interior"}]}], " ", "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"i", ">", "1"}], "&&", 
+              RowBox[{"j", ">", "1"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Poly", "=", 
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"sid", "+", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "2"}], 
+                 ",", "\[IndentingNewLine]", 
+                 RowBox[{"sid", "+", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "1"}], 
+                 ",", "\[IndentingNewLine]", 
+                 RowBox[{"sid", "+", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "2"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "1"}], 
+                 ",", "\[IndentingNewLine]", 
+                 RowBox[{"sid", "+", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"i", "-", "2"}], ")"}], "*", 
+                   RowBox[{"(", 
+                    RowBox[{"sw", "-", "1"}], ")"}]}], "+", "j", "-", "2"}]}],
+                 "\[IndentingNewLine]", "}"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+            "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", 
+         "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Wall", " ", 
+          RowBox[{"VI", ":", " ", 
+           RowBox[{"upper", " ", "right", " ", "corner"}]}]}], " ", "*)"}], 
         "\[IndentingNewLine]", 
-        RowBox[{"sid", "+", 
+        RowBox[{"If", "[", 
          RowBox[{
-          RowBox[{"(", 
-           RowBox[{"sw", "-", "1"}], ")"}], "*", 
-          RowBox[{"(", 
-           RowBox[{"sh", "-", "2"}], ")"}]}], "+", "j", "-", "1"}]}], 
-       "\[IndentingNewLine]", " ", "}"}]}], ";", "\[IndentingNewLine]", 
-     RowBox[{"AppendTo", "[", 
-      RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
-   "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
-  RowBox[{"(*", " ", 
-   RowBox[{"Wall", " ", 
-    RowBox[{"VI", ":", " ", 
-     RowBox[{"lower", " ", "right", " ", "corner"}]}]}], " ", 
-   "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"Poly", "=", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"sw", "-", "1"}], ",", " ", "sw", ",", 
-     RowBox[{
-      RowBox[{"nw", "*", "nd"}], "+", "rl", "-", "1"}], ",", " ", 
-     RowBox[{"Nvert", "-", "1"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+          RowBox[{"i", "\[Equal]", "1"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Poly", "=", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"sid", "+", 
+               RowBox[{"(", 
+                RowBox[{"sw", "-", "2"}], ")"}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"sid", "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", "rl", "-",
+                "1"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"sid", "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", "1"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"sid", "-", "1"}]}], "\[IndentingNewLine]", "}"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"(*", " ", 
+         RowBox[{"Wall", " ", 
+          RowBox[{"VI", ":", " ", 
+           RowBox[{"right", " ", "edge"}]}]}], " ", "*)"}], 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"i", ">", "1"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"Poly", "=", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"sid", "+", 
+               RowBox[{"i", "*", 
+                RowBox[{"(", 
+                 RowBox[{"sw", "-", "1"}], ")"}]}], "-", "1"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"sid", "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+               RowBox[{"i", "*", "rl"}], "-", "1"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"sid", "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"i", "-", "1"}], ")"}], "*", "rl"}], "-", "1"}], ",",
+               "\[IndentingNewLine]", 
+              RowBox[{"sid", "+", 
+               RowBox[{
+                RowBox[{"(", 
+                 RowBox[{"i", "-", "1"}], ")"}], "*", 
+                RowBox[{"(", 
+                 RowBox[{"sw", "-", "1"}], ")"}]}], "-", "1"}]}], 
+             "\[IndentingNewLine]", "}"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+         "\[IndentingNewLine]", "]"}], ";"}], "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{"case", " ", "for", " ", "sw"}], " ", "=", " ", "1"}], " ", 
+        "*)"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{"ceiling", " ", "wall", " ", "VI", " ", 
+         RowBox[{"faces", ":"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"Poly", "=", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"sid", "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+            RowBox[{"2", "*", "rl"}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"i", "-", "1"}], ")"}], "*", "rl"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"sid", "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+            RowBox[{"i", "*", "rl"}], "-", "1"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"sid", "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"i", "-", "1"}], ")"}], "*", "rl"}], "-", "1"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"sid", "-", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"sw", "-", "1"}], ")"}], "*", "sd"}], "-", 
+            RowBox[{"i", "*", "rl"}]}]}], "\[IndentingNewLine]", "}"}]}], ";",
+         "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+      "\[IndentingNewLine]", "]"}], ";"}]}], "\[IndentingNewLine]", "]"}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"AppendTo", "[", 
-    RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}], 
+   RowBox[{"If", "[", 
+    RowBox[{
+     RowBox[{"sw", ">", "1"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"Wall", " ", 
+       RowBox[{"VI", ":", " ", 
+        RowBox[{"lower", " ", "left", " ", "corner"}]}]}], " ", "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Poly", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", " ", "1", ",", " ", 
+         RowBox[{"sid", "+", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"sw", "-", "1"}], ")"}], "*", 
+           RowBox[{"(", 
+            RowBox[{"sh", "-", "2"}], ")"}]}]}], ",", " ", 
+         RowBox[{"nw", "*", "nd"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"Polygons", ",", "Poly"}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", " ", 
+       RowBox[{"Wall", " ", 
+        RowBox[{"VI", ":", " ", 
+         RowBox[{"last", " ", "row", " ", "interior"}]}]}], " ", "*)"}], 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"j", "=", "1"}], ",", 
+         RowBox[{"j", "<", 
+          RowBox[{"sw", "-", "1"}]}], ",", 
+         RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"Poly", "=", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{"j", ",", "\[IndentingNewLine]", 
+             RowBox[{"j", "+", "1"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"sid", "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"sw", "-", "1"}], ")"}], "*", 
+               RowBox[{"(", 
+                RowBox[{"sh", "-", "2"}], ")"}]}], "+", "j"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"sid", "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{"sw", "-", "1"}], ")"}], "*", 
+               RowBox[{"(", 
+                RowBox[{"sh", "-", "2"}], ")"}]}], "+", "j", "-", "1"}]}], 
+            "\[IndentingNewLine]", " ", "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"AppendTo", "[", 
+           RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+        "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{"Wall", " ", 
+         RowBox[{"VI", ":", " ", 
+          RowBox[{"lower", " ", "right", " ", "corner"}]}]}], " ", "*)"}], 
+       "\[IndentingNewLine]", 
+       RowBox[{"Poly", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"sw", "-", "1"}], ",", " ", "sw", ",", 
+          RowBox[{
+           RowBox[{"nw", "*", "nd"}], "+", "rl", "-", "1"}], ",", " ", 
+          RowBox[{"Nvert", "-", "1"}]}], "}"}]}]}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}], "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+       RowBox[{"case", " ", "for", " ", "sw"}], " ", "=", " ", "1"}], " ", 
+      "*)"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"(*", " ", 
+      RowBox[{"wall", " ", "VI", " ", "last", " ", 
+       RowBox[{"face", ":"}]}], " ", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Poly", "=", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", " ", "sw", ",", 
+         RowBox[{
+          RowBox[{"nw", "*", "nd"}], "+", "rl", "-", "1"}], ",", " ", 
+         RowBox[{"nw", "*", "nd"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"AppendTo", "[", 
+       RowBox[{"Polygons", ",", "Poly"}], "]"}], ";"}]}], 
+    "\[IndentingNewLine]", "]"}], ";"}], 
   "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"dd", "=", "0.5"}], ";", " ", 
@@ -1582,12 +1647,17 @@ Cell[BoxData[{
    3.7597302636410155`*^9, 3.7597302687545547`*^9}, {3.7597303128694844`*^9, 
    3.7597303193438144`*^9}, 3.7597303508190393`*^9, 3.759730395875804*^9, {
    3.759730443512887*^9, 3.7597304577698345`*^9}, 3.7597304954755554`*^9, {
-   3.7597305281866755`*^9, 3.7597305358754916`*^9}}],
+   3.7597305281866755`*^9, 3.7597305358754916`*^9}, 3.759730565907155*^9, {
+   3.7597309354969788`*^9, 3.7597310248236*^9}, {3.7597312993213243`*^9, 
+   3.7597313089777427`*^9}, {3.7597313456006546`*^9, 3.75973136002736*^9}, 
+   3.759731455914006*^9, 3.7597315107302113`*^9, 3.7597315748071527`*^9, {
+   3.7597316222645307`*^9, 3.7597317408823175`*^9}, {3.7597317864359694`*^9, 
+   3.7597317868092346`*^9}}],
 
 Cell[BoxData[
  InterpretationBox[
-  RowBox[{"\<\"N = \"\>", "\[InvisibleSpace]", "18"}],
-  SequenceForm["N = ", 18],
+  RowBox[{"\<\"N = \"\>", "\[InvisibleSpace]", "200"}],
+  SequenceForm["N = ", 200],
   Editable->False]], "Print",
  CellChangeTimes->{
   3.7586248606582003`*^9, 3.7586249157661295`*^9, 3.7586250554406586`*^9, 
@@ -1596,7 +1666,9 @@ Cell[BoxData[
    3.7586254495522876`*^9, 3.7586255047067437`*^9, {3.7586255422066746`*^9, 
    3.7586255719540987`*^9}, 3.7597287822296853`*^9, {3.7597291810651293`*^9, 
    3.7597291980070767`*^9}, 3.7597300948290987`*^9, 3.759730270598233*^9, 
-   3.7597303205953836`*^9}],
+   3.7597303205953836`*^9, {3.7597305393723726`*^9, 3.7597305668715057`*^9}, 
+   3.7597315237040977`*^9, 3.7597315765243306`*^9, 3.759731707551936*^9, 
+   3.7597317432242155`*^9, 3.7597317876778812`*^9}],
 
 Cell[BoxData[
  TagBox[
@@ -1605,13 +1677,13 @@ Cell[BoxData[
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`imax$$], 1, 18, 1}}, Typeset`size$$ = {
-    396., {212., 218.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`imax$12689$$ = 0}, 
+      Hold[$CellContext`imax$$], 1, 200, 1}}, Typeset`size$$ = {
+    324., {174., 178.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`imax$31597$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`imax$$ = 1}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`imax$$, $CellContext`imax$12689$$, 0]}, 
+        Hold[$CellContext`imax$$, $CellContext`imax$31597$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -1701,9 +1773,9 @@ $CellContext`dd, -$CellContext`dd}]],
         Graphics3D[
          Text[$CellContext`z, {-$CellContext`dd, -$CellContext`dd, \
 $CellContext`h + $CellContext`dd}]]], 
-      "Specifications" :> {{$CellContext`imax$$, 1, 18, 1}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{451., {263., 270.}},
+      "Specifications" :> {{$CellContext`imax$$, 1, 200, 1}}, "Options" :> {},
+       "DefaultOptions" :> {}],
+     ImageSizeCache->{371., {217., 223.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -1720,7 +1792,9 @@ $CellContext`h + $CellContext`dd}]]],
    3.7586254497263174`*^9, 3.7586255048852654`*^9, {3.758625542380248*^9, 
    3.758625572136611*^9}, 3.759728782421173*^9, {3.7597291812329407`*^9, 
    3.759729198164688*^9}, 3.759730095003643*^9, 3.7597302707602797`*^9, 
-   3.7597303207659535`*^9}]
+   3.7597303207659535`*^9, {3.759730539536933*^9, 3.759730567028084*^9}, 
+   3.759731523869693*^9, 3.759731576683425*^9, 3.759731707719491*^9, 
+   3.7597317433819976`*^9, 3.7597317878390055`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2022,17 +2096,17 @@ Cell[BoxData[
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`jmax$$ = 1, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`jmax$$ = 198, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`jmax$$], 1, 17, 1}}, Typeset`size$$ = {
-    396., {212., 218.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`jmax$12881$$ = 0}, 
+      Hold[$CellContext`jmax$$], 1, 198, 1}}, Typeset`size$$ = {
+    371., {178., 181.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`jmax$31789$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, "Variables" :> {$CellContext`jmax$$ = 1}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`jmax$$, $CellContext`jmax$12881$$, 0]}, 
+        Hold[$CellContext`jmax$$, $CellContext`jmax$31789$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -2138,9 +2212,9 @@ $CellContext`dd, -$CellContext`dd}]],
         Graphics3D[
          Text[$CellContext`z, {-$CellContext`dd, -$CellContext`dd, \
 $CellContext`h + $CellContext`dd}]]], 
-      "Specifications" :> {{$CellContext`jmax$$, 1, 17, 1}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
-     ImageSizeCache->{451., {263., 270.}},
+      "Specifications" :> {{$CellContext`jmax$$, 1, 198, 1}}, "Options" :> {},
+       "DefaultOptions" :> {}],
+     ImageSizeCache->{418., {221., 227.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -2193,7 +2267,9 @@ $CellContext`h + $CellContext`dd}]]],
    3.758625280705604*^9, 3.7586253114374833`*^9, 3.7586253829253864`*^9, {
    3.7586255495782166`*^9, 3.758625576289445*^9}, 3.7597287824999623`*^9, 
    3.7597292014448686`*^9, 3.7597301008687043`*^9, 3.759730273130719*^9, 
-   3.7597303228500814`*^9}]
+   3.7597303228500814`*^9, {3.7597305416754684`*^9, 3.759730569940886*^9}, 
+   3.7597315272883544`*^9, 3.7597315797420835`*^9, 3.759731710168006*^9, 
+   3.759731746422987*^9, 3.7597317915443354`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -2231,13 +2307,11 @@ Cell[BoxData[
    RowBox[{"{", 
     RowBox[{"13", ",", "16", ",", "15", ",", "14"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"12", ",", "18", ",", "17", ",", "13"}], "}"}], ",", 
+    RowBox[{"12", ",", "17", ",", "16", ",", "13"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"17", ",", "11", ",", "17", ",", "17"}], "}"}], ",", 
+    RowBox[{"6", ",", "11", ",", "17", ",", "12"}], "}"}], ",", 
    RowBox[{"{", 
-    RowBox[{"0", ",", "1", ",", "18", ",", "6"}], "}"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"0", ",", "1", ",", "11", ",", "17"}], "}"}]}], "}"}]], "Output",
+    RowBox[{"0", ",", "1", ",", "11", ",", "6"}], "}"}]}], "}"}]], "Output",
  CellChangeTimes->{
   3.7586054618222947`*^9, 3.7586065060279856`*^9, 3.7586065642844434`*^9, 
    3.758607770574269*^9, 3.7586080879269733`*^9, 3.758611589811262*^9, 
@@ -2254,12 +2328,14 @@ Cell[BoxData[
    3.7586206054265213`*^9, 3.7586206559940033`*^9, 3.7586209776827927`*^9, 
    3.7586210626678314`*^9, 3.7586238112040806`*^9, 3.758623976011671*^9, 
    3.759728782834069*^9, 3.7597302300317793`*^9, 3.7597302759597015`*^9, 
-   3.7597303254479628`*^9, 3.759730411679695*^9}]
+   3.7597303254479628`*^9, 3.759730411679695*^9, 3.7597305526140227`*^9, 
+   3.75973058431581*^9, 3.759731546891082*^9, 3.759731589863369*^9, 
+   3.759731718691945*^9}]
 }, Open  ]]
 },
 WindowSize->{1037, 872},
 WindowMargins->{{400, Automatic}, {43, Automatic}},
-Magnification:>1.1 Inherited,
+Magnification:>0.9 Inherited,
 FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
 StyleDefinitions->"Default.nb"
 ]
@@ -2274,30 +2350,30 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 1021, 33, 84, "Input"],
+Cell[558, 20, 1021, 33, 77, "Input"],
 Cell[CellGroupData[{
-Cell[1604, 57, 2956, 95, 163, "Input"],
+Cell[1604, 57, 2956, 95, 153, "Input"],
 Cell[4563, 154, 364, 8, 52, "Output"],
 Cell[4930, 164, 315, 6, 50, "Output"],
 Cell[5248, 172, 315, 6, 49, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5600, 183, 800, 21, 93, "Input"],
-Cell[6403, 206, 324, 5, 33, "Output"],
-Cell[6730, 213, 323, 5, 33, "Output"]
+Cell[5600, 183, 800, 21, 90, "Input"],
+Cell[6403, 206, 324, 5, 28, "Output"],
+Cell[6730, 213, 323, 5, 28, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7090, 223, 59522, 1361, 6013, "Input"],
-Cell[66615, 1586, 645, 12, 24, "Print"],
-Cell[67263, 1600, 5801, 122, 551, "Output"]
+Cell[7090, 223, 63395, 1431, 6410, "Input"],
+Cell[70488, 1656, 823, 14, 21, "Print"],
+Cell[71314, 1672, 5971, 124, 455, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[73101, 1727, 11792, 292, 1153, "Input"],
-Cell[84896, 2021, 9019, 174, 551, "Output"]
+Cell[77322, 1801, 11792, 292, 1150, "Input"],
+Cell[89117, 2095, 9195, 176, 496, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[93952, 2200, 104, 1, 32, "Input"],
-Cell[94059, 2203, 2598, 53, 135, "Output"]
+Cell[98349, 2276, 104, 1, 29, "Input"],
+Cell[98456, 2279, 2635, 53, 48, "Output"]
 }, Open  ]]
 }
 ]
